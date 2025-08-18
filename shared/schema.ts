@@ -48,11 +48,16 @@ export const applications = pgTable("applications", {
   firstName: text("first_name").notNull(),
   lastName: text("last_name").notNull(),
   email: text("email").notNull(),
-  phone: text("phone"),
-  courseId: varchar("course_id").references(() => courses.id),
-  planType: text("plan_type").notNull(), // "standard" or "professional"
-  status: text("status").default("pending"), // "pending", "approved", "rejected"
-  message: text("message"),
+  phone: text("phone").notNull(),
+  course: text("course").notNull(),
+  plan: text("plan").notNull(),
+  startDate: text("start_date").notNull(),
+  experience: text("experience").notNull(),
+  motivation: text("motivation").notNull(),
+  previousEducation: text("previous_education").notNull(),
+  workExperience: text("work_experience"),
+  expectations: text("expectations").notNull(),
+  status: text("status").default("pending"),
   createdAt: timestamp("created_at").defaultNow(),
 });
 

@@ -136,7 +136,23 @@
   }
   
   .course-card {
-    @apply bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 overflow-hidden;
+    @apply bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 overflow-hidden transform hover:-translate-y-2;
+  }
+  
+  .course-card.group {
+    /* Additional group styles can be added here if needed */
+  }
+  
+  .course-card-image {
+    @apply relative overflow-hidden;
+  }
+  
+  .course-card-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300;
+  }
+  
+  .course-card-price {
+    @apply text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
   }
   
   .instructor-card {

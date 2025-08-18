@@ -79,6 +79,19 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const validatedData = insertApplicationSchema.parse(req.body);
       const application = await storage.createApplication(validatedData);
+      
+      // Send email notifications (async, don't wait for completion)
+      Promise.all([
+        import('./email').then(({ sendApplicationNotification }) => 
+          sendApplicationNotification(application)
+        ),
+        import('./email').then(({ sendApplicationConfirmation }) => 
+          sendApplicationConfirmation(application)
+        )
+      ]).catch(error => {
+        console.error('Email notification failed:', error);
+      });
+      
       res.status(201).json({ 
         message: "Application submitted successfully", 
         application 
@@ -126,6 +139,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const validatedData = insertContactMessageSchema.parse(req.body);
       const message = await storage.createContactMessage(validatedData);
+      
+      // Send email notification (async, don't wait for completion)
+      import('./email').then(({ sendContactNotification }) => 
+        sendContactNotification(message)
+      ).catch(error => {
+        console.error('Contact email notification failed:', error);
+      });
+      
       res.status(201).json({ 
         message: "Contact message sent successfully", 
         contactMessage: message 
