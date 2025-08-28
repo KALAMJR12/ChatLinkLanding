@@ -27,7 +27,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black/10"></div>
       <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent"></div>
       
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="text-white space-y-8">
@@ -40,7 +40,7 @@ export default function Hero() {
               </h1>
               <p className="text-xl md:text-2xl leading-relaxed opacity-95 max-w-xl" data-testid="text-hero-description">
                 Professional courses in <strong>Cybersecurity</strong>, <strong>Web Development</strong>, 
-                and <strong>Network Infrastructure</strong>. Training in Lagos, Abuja, and online.
+                and <strong>Network Infrastructure</strong>. Training in Kaduna and online.
               </p>
             </div>
 
@@ -49,11 +49,11 @@ export default function Hero() {
               <div className="grid grid-cols-2 gap-4 text-center">
                 <div>
                   <div className="text-2xl font-bold text-yellow-300">Apply Before</div>
-                  <div className="text-lg">June 20, 2025</div>
+                  <div className="text-lg">August 30, 2025</div>
                 </div>
                 <div>
                   <div className="text-2xl font-bold text-yellow-300">Next Start</div>
-                  <div className="text-lg">June 27, 2025</div>
+                  <div className="text-lg">September 7, 2025</div>
                 </div>
               </div>
             </div>
@@ -73,7 +73,7 @@ export default function Hero() {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 text-lg font-semibold"
+                className="bg-green-400 border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 text-lg font-semibold"
                 data-testid="button-download-brochure"
               >
                 <i className="fas fa-download mr-2"></i>
@@ -93,7 +93,7 @@ export default function Hero() {
               </div>
               <div className="flex items-center space-x-2">
                 <i className="fas fa-users text-yellow-300"></i>
-                <span>9,999+ enrolled students</span>
+                <span>100+ enrolled students</span>
               </div>
             </div>
           </div>
@@ -110,7 +110,7 @@ export default function Hero() {
                   <h3 className="text-2xl font-bold">Professional Training</h3>
                   <p className="text-lg opacity-90">Industry-Standard Curriculum</p>
                 </div>
-              </div>
+              </div> 
               
               {/* Floating Stats Cards */}
               <div className="absolute -top-4 -left-4 bg-white rounded-2xl p-4 shadow-xl">

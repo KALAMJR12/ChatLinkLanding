@@ -117,16 +117,16 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-6">Contact Info</h3>
             <div className="space-y-3 text-gray-400">
-              <p data-testid="footer-address-lagos">122A Obadina Street<br />Omole Phase 1, Ikeja, Lagos</p>
-              <p data-testid="footer-address-abuja">22 Kumasi Cres<br />Wuse 2, Abuja 904101, FCT</p>
-              <p data-testid="footer-email">info@talentshive.org</p>
-              <p data-testid="footer-phone">+234 904 551 8768</p>
+              <p data-testid="footer-address-lagos">College Road<br />Anguwan Dosa, Kaduna</p>
+              <p data-testid="footer-address-abuja">Berain Table Water Building<br />College Road, Kaduna</p>
+              <p data-testid="footer-email">info@talentshive.net.ng</p>
+              <p data-testid="footer-phone">+234 806-318-4812, +234 912-147-3133 </p>
             </div>
           </div>
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400" data-testid="footer-copyright">&copy; 2024 TalentsHive. All rights reserved.</p>
+          <p className="text-gray-400" data-testid="footer-copyright">&copy; 2025 TalentsHive. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-gray-400 hover:text-primary transition-colors duration-200" data-testid="footer-privacy">Privacy Policy</a>
             <a href="#" className="text-gray-400 hover:text-primary transition-colors duration-200" data-testid="footer-terms">Terms of Service</a>

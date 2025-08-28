@@ -101,5 +101,16 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
+  plugins: [
+    // @ts-ignore
+    require("tailwindcss-animate"),
+    // @ts-ignore
+    require("@tailwindcss/typography")
+  ],
 } satisfies Config;
+
+// If you want to avoid using require, you can use import statements at the top:
+// import tailwindcssAnimate from "tailwindcss-animate";
+// import typography from "@tailwindcss/typography";
+// and then use:
+// plugins: [tailwindcssAnimate, typography],
